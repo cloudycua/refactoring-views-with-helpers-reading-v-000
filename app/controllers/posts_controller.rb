@@ -30,14 +30,13 @@ class PostsController < ApplicationController
 	private
 
 		def post_params
-			
-		params.require(:post).permit(
-			:title,
-			:description,
-			:created_at,
-			:updated_at,
-			:post_status,
-			:author_id
-			)
+			params.require(:post).permit(
+				:title,
+				:description,
+				:created_at,
+				:updated_at,
+				:post_status,
+				:author_id
+				)
 		end
 end
