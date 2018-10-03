@@ -279,3 +279,14 @@ ActiveRecord::UnknownAttributeError (unknown attribute 'utf8' for Post.):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.7ms)
+
+
+Started POST "/posts" for 24.228.153.119 at 2018-10-03 18:48:02 +0000
+Cannot render console from 24.228.153.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q6DdJCnx8DTQpAjKP/G6AY2MmA9avOeO+g5kprCXdMWY7xIQClRTXie9hxIH8FtYxMXd/FoMwM092b1gxNeBCw==", "post"=>{"title"=>"1", "description"=>"2"}, "commit"=>"Create Post"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "1"], ["description", "2"], ["created_at", "2018-10-03 18:48:02.295426"], ["updated_at", "2018-10-03 18:48:02.295426"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://174.138.35.103:33116/posts/1
+Completed 302 Found in 24ms (ActiveRecord: 5.0ms)
