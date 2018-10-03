@@ -1,6 +1,6 @@
-<%= form_for(@post) do |f| 
+<%= form_for(@post) do |f|
   <%= post.updated_at.strftime("Last updated %A, %b %e, at %l:%M %p") %></div>
-  
+
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
 
